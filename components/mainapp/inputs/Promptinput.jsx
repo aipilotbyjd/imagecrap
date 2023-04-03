@@ -29,12 +29,28 @@ const Promptinput = () => {
     setPrompt("");
   };
 
+  const InspirationPrompts = [
+    "Write about a time you felt like you were on top of the world.",
+    "Remember a time you felt like you were on top of the world.",
+    "you felt like you were on top of the world.",
+    "gyou felt like you were on top of the world.",
+    "jyou felt like you were on top of the world.",
+    "ko you felt like you were on top of the world.",
+  ];
+
+  const AddInsPrompts = () => {
+    const randomInspiration = InspirationPrompts[Math.floor(Math.random() * 5)];
+    setPrompt(randomInspiration);
+  };
+
   return (
     <View style={styles.container}>
       {/* //i want to add a two text like clicable text */}
       <View style={styles.textcontainer}>
         <Text style={styles.text}>Add Your Photo</Text>
-        <Text style={styles.text}>I Need Inspiration</Text>
+        <TouchableOpacity onPress={AddInsPrompts}>
+          <Text style={styles.text}>I Need Inspiration</Text>
+        </TouchableOpacity>
       </View>
       {/* i want single text area to this */}
       <View style={styles.textareacontainer}>
