@@ -55,16 +55,34 @@ const styles = StyleSheet.create({
   },
   textarea: {
     width: "100%",
-    height: 70,
+    height: 50,
     fontSize: SIZES.xmediam,
     fontFamily: FONT.medium,
     color: COLORS.gray,
     paddingLeft: SIZES.small,
   },
+  // textareabigger: {
+  //   width: "100%",
+  //   height: 120,
+  //   fontSize: SIZES.xmediam,
+  //   fontFamily: FONT.medium,
+  //   color: COLORS.gray,
+  //   paddingLeft: SIZES.small,
+  // },
   textareatext: {
     fontSize: SIZES.medium,
     fontFamily: FONT.medium,
     color: COLORS.gray,
+  },
+  textarealength: {
+    fontSize: SIZES.small,
+    fontFamily: FONT.medium,
+    color: COLORS.gray2,
+  },
+  textarealength2: {
+    fontSize: SIZES.small,
+    fontFamily: FONT.medium,
+    color: COLORS.red,
   },
   textareamain: {
     marginTop: SIZES.small,
