@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -11,6 +11,12 @@ import {
 import { FONT, icons } from "../../../constants";
 
 const SliderCat = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleSelectItem = (item) => {
+    setSelectedItem(item);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.stylecontainer}>
@@ -24,42 +30,79 @@ const SliderCat = () => {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.scrollContainer}
         >
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.stylesingle,
+              selectedItem === "item1" && styles.selected,
+            ]}
+            onPress={() => handleSelectItem("item1")}
+          >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.stylesingle,
+              selectedItem === "item2" && styles.selected,
+            ]}
+            onPress={() => handleSelectItem("item2")}
+          >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.stylesingle,
+              selectedItem === "item3" && styles.selected,
+            ]}
+            onPress={() => handleSelectItem("item3")}
+          >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.stylesingle,
+              selectedItem === "item4" && styles.selected,
+            ]}
+            onPress={() => handleSelectItem("item4")}
+          >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.stylesingle,
+              selectedItem === "item5" && styles.selected,
+            ]}
+            onPress={() => handleSelectItem("item5")}
+          >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.stylesingle,
+              selectedItem === "item6" && styles.selected,
+            ]}
+            onPress={() => handleSelectItem("item6")}
+          >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <View style={styles.iconcontainer}>
-              <Image source={icons.share} style={styles.icon} />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.stylesingle,
+              selectedItem === "item7" && styles.selected,
+            ]}
+            onPress={() => handleSelectItem("item7")}
+          >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
@@ -123,6 +166,15 @@ const styles = StyleSheet.create({
   scrollContainer: {
     justifyContent: "center",
     alignItems: "center",
+  },
+  stylesingle: {
+    marginHorizontal: 5,
+    marginVertical: 5,
+  },
+  selected: {
+    borderWidth: 2,
+    borderColor: "#000",
+    borderRadius: 10,
   },
 });
 
