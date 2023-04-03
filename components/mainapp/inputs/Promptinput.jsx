@@ -11,6 +11,7 @@ import {
 import styles from "./promptinput.style";
 
 import { COLORS, icons, SIZES, FONT } from "../../../constants";
+import SliderCat from "./SliderCat";
 
 const Promptinput = () => {
   const [prompt, setPrompt] = React.useState("");
@@ -114,6 +115,9 @@ const Promptinput = () => {
             <Image source={icons.cross} style={styles.crossicon} />
           </TouchableOpacity>
         </View>
+      </View>
+      <View style={styles.slidercontainer}>
+        <SliderCat />
       </View>
     </View>
   );
