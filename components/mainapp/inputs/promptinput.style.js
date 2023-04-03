@@ -56,10 +56,10 @@ const styles = StyleSheet.create({
   textarea: {
     width: "100%",
     height: 70,
-    padding: SIZES.small,
-    fontSize: SIZES.medium,
+    fontSize: SIZES.xmediam,
     fontFamily: FONT.medium,
     color: COLORS.gray,
+    paddingLeft: SIZES.small,
   },
   textareatext: {
     fontSize: SIZES.medium,
@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
     height: 15,
   },
   crossicon: {
-    width: 15,
-    height: 15,
+    width: 10,
+    height: 10,
   },
   textareaicons: {
     flexDirection: "row",
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginEnd: SIZES.small,
     marginStart: SIZES.small,
+    marginBottom: SIZES.xSmall,
   },
 });
 

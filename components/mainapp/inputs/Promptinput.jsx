@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { TextInput, View, Image, Text } from "react-native";
 
 import styles from "./promptinput.style";
@@ -6,6 +6,7 @@ import styles from "./promptinput.style";
 import { COLORS, icons, SIZES } from "../../../constants";
 
 const Promptinput = () => {
+  const [prompt, setPrompt] = React.useState("");
   return (
     <View style={styles.container}>
       {/* //i want to add a two text like clicable text */}
@@ -16,10 +17,15 @@ const Promptinput = () => {
       {/* i want single text area to this */}
       <View style={styles.textareacontainer}>
         <View style={styles.textareatext}>
-          <Text style={styles.textprompt}>Enter a Prompt</Text>
+          <Text id="textprompt" style={styles.textprompt}>
+            Enter a Prompt
+          </Text>
         </View>
         <TextInput
+          id="prompt"
           style={styles.textarea}
+          value={prompt}
+          onChangeText={(text) => setPrompt(text)}
           placeholder="Anything you want enter in prompt"
         />
         <View style={styles.textareaicons}>
