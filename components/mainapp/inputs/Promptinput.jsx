@@ -25,7 +25,7 @@ const Promptinput = () => {
   }, [prompt]);
 
   const DeletePrompt = () => {
-    ToastAndroid.show("Prompt Deleted", ToastAndroid.SHORT);
+    ToastAndroid.show("Prompt Deleted", 1000);
     setPrompt("");
   };
 
@@ -69,7 +69,13 @@ const Promptinput = () => {
           placeholder="Anything you want enter in prompt"
         />
         <View style={styles.textareaicons}>
-          <Image source={icons.history} style={styles.historyicon} />
+          <TouchableOpacity
+            onPress={() => {
+              ToastAndroid.show("History", ToastAndroid.SHORT);
+            }}
+          >
+            <Image source={icons.history} style={styles.historyicon} />
+          </TouchableOpacity>
           {/* WRITE TEXT PROMPT LENGHT */}
           {prompt.length > 0 && prompt.length < 500 && (
             <Text style={styles.textarealength}>
