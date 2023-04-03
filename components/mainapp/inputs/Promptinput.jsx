@@ -1,5 +1,12 @@
 import React, { useEffect } from "react";
-import { TextInput, View, Image, Text } from "react-native";
+import {
+  TextInput,
+  View,
+  Image,
+  Text,
+  ToastAndroid,
+  TouchableOpacity,
+} from "react-native";
 
 import styles from "./promptinput.style";
 
@@ -7,6 +14,21 @@ import { COLORS, icons, SIZES, FONT } from "../../../constants";
 
 const Promptinput = () => {
   const [prompt, setPrompt] = React.useState("");
+
+  useEffect(() => {
+    if (prompt.length > 500) {
+      ToastAndroid.show(
+        "You can't write more than 500 characters",
+        ToastAndroid.TOP
+      );
+    }
+  }, [prompt]);
+
+  const DeletePrompt = () => {
+    ToastAndroid.show("Prompt Deleted", ToastAndroid.SHORT);
+    setPrompt("");
+  };
+
   return (
     <View style={styles.container}>
       {/* //i want to add a two text like clicable text */}
@@ -60,7 +82,9 @@ const Promptinput = () => {
               characters : {prompt.length}
             </Text>
           )}
-          <Image source={icons.cross} style={styles.crossicon} />
+          <TouchableOpacity onPress={DeletePrompt}>
+            <Image source={icons.cross} style={styles.crossicon} />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
