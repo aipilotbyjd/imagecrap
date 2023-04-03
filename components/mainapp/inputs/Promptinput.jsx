@@ -70,7 +70,13 @@ const Promptinput = () => {
               : {
                   width: "100%",
                   height:
-                    prompt.length > 100 ? 140 : prompt.length > 70 ? 70 : 70,
+                    prompt.length > 100
+                      ? 140
+                      : prompt.length > 60
+                      ? 80
+                      : prompt.length > 80
+                      ? 120
+                      : 80,
                   paddingHorizontal: 10,
                   paddingVertical: 10,
                   fontSize: 16,
