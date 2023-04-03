@@ -1,12 +1,12 @@
 import React from "react";
 import { SafeAreaView, Text, View } from "react-native";
+import { Promptinput } from "../components";
 
 const Home = () => {
   return (
     <SafeAreaView>
-      <Text>Home</Text>
       <View>
-        <Text>Home</Text>
+        <Promptinput />
       </View>
     </SafeAreaView>
   );
