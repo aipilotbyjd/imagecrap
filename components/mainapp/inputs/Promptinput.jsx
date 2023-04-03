@@ -16,13 +16,16 @@ const Promptinput = () => {
       {/* i want single text area to this */}
       <View style={styles.textareacontainer}>
         <View style={styles.textareatext}>
-          <Text style={styles.text}>Enter a Prompt</Text>
+          <Text style={styles.textprompt}>Enter a Prompt</Text>
         </View>
         <TextInput
           style={styles.textarea}
           placeholder="Anything you want enter in prompt"
         />
-      
+        <View style={styles.textareaicons}>
+          <Image source={icons.history} style={styles.historyicon} />
+          <Image source={icons.cross} style={styles.crossicon} />
+        </View>
       </View>
     </View>
   );
