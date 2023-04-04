@@ -37,7 +37,7 @@ const Promptinput = () => {
     setIsClicked(true);
     setTimeout(() => {
       setIsClicked(false);
-    }, 1000);
+    }, 5000);
   };
 
   const InspirationPrompts = [
