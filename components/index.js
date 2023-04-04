@@ -18,6 +18,9 @@ import NearbyJobCard from "./common/cards/nearby/NearbyJobCard";
 // MAIN app
 import Promptinput from "./mainapp/inputs/Promptinput";
 
+//slider component
+import Slidering from "./mainapp/slider/Slidering";
+
 export {
   ScreenHeaderBtn,
   Welcome,
@@ -30,4 +33,5 @@ export {
   Specifics,
   NearbyJobCard,
   Promptinput,
+  Slidering,
 };
