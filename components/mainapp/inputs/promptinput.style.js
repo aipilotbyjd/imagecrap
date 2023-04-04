@@ -121,6 +121,16 @@ const styles = StyleSheet.create({
     paddingStart: SIZES.small,
     paddingEnd: SIZES.small,
   },
+  submitbuttonbasedisabled: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    backgroundColor: COLORS.lightBlack,
+    borderRadius: 10,
+    height: 70,
+    alignItems: "center",
+    paddingStart: SIZES.small,
+    paddingEnd: SIZES.small,
+  },
   submitbuttontext: {
     fontSize: SIZES.xmediam,
     fontFamily: FONT.medium,

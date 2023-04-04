@@ -134,7 +134,12 @@ const Promptinput = () => {
           onPress={() => {
             createImage();
           }}
-          style={styles.submitbuttonbase}
+          style={
+            isClicked
+              ? styles.submitbuttonbasedisabled
+              : styles.submitbuttonbase
+          }
+          disabled={isClicked}
         >
           <Image source={icons.video} style={styles.submitbuttonicon} />
           {isClicked ? (

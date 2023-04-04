@@ -10,6 +10,7 @@ const COLORS = {
   lightWhite: "#FAFAFC",
 
   black: "#000000",
+  lightBlack: "#1E1E1E",
 
   red: "#FF0000",
 };
