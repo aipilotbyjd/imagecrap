@@ -12,6 +12,7 @@ import history from "../assets/icons/history.png";
 import cross from "../assets/icons/cross.png";
 import video from "../assets/icons/videos.png";
 import rightarrow from "../assets/icons/rightarrow.png";
+import loder from "../assets/icons/lodr.gif";
 
 export default {
   heart,
@@ -28,4 +29,5 @@ export default {
   cross,
   video,
   rightarrow,
+  loder,
 };

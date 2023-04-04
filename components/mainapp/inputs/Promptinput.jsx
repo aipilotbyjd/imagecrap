@@ -17,6 +17,7 @@ import SliderCat from "./SliderCat";
 
 const Promptinput = () => {
   const [prompt, setPrompt] = React.useState("");
+  const [isClicked, setIsClicked] = React.useState(false);
 
   useEffect(() => {
     if (prompt.length > 500) {
@@ -30,6 +31,13 @@ const Promptinput = () => {
   const DeletePrompt = () => {
     ToastAndroid.show("Prompt Deleted", 1000);
     setPrompt("");
+  };
+
+  const createImage = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 1000);
   };
 
   const InspirationPrompts = [
@@ -122,12 +130,25 @@ const Promptinput = () => {
         <SliderCat />
       </View>
       <View style={styles.submitbutton}>
-        <TouchableOpacity style={styles.submitbuttonbase}>
+        <TouchableOpacity
+          onPress={() => {
+            createImage();
+          }}
+          style={styles.submitbuttonbase}
+        >
           <Image source={icons.video} style={styles.submitbuttonicon} />
-          <View style={styles.submitbuttontexts}>
-            <Text style={styles.submitbuttontext}>Create</Text>
-            <Text style={styles.submitbuttontext2}>Watch an Ad</Text>
-          </View>
+          {isClicked ? (
+            <Image
+              source={icons.loder}
+              color={COLORS.primary}
+              style={styles.submitbuttonloder}
+            />
+          ) : (
+            <View style={styles.submitbuttontexts}>
+              <Text style={styles.submitbuttontext}>Create</Text>
+              <Text style={styles.submitbuttontext2}>Watch an Ad</Text>
+            </View>
+          )}
           <FontAwesome
             style={styles.submitbuttonicon}
             name="arrow-circle-o-right"
