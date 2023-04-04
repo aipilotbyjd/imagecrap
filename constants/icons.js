@@ -10,6 +10,8 @@ import chevronLeft from "../assets/icons/chevron-left.png";
 import chevronRight from "../assets/icons/chevron-right.png";
 import history from "../assets/icons/history.png";
 import cross from "../assets/icons/cross.png";
+import video from "../assets/icons/videos.png";
+import rightarrow from "../assets/icons/rightarrow.png";
 
 export default {
   heart,
@@ -24,4 +26,6 @@ export default {
   chevronRight,
   history,
   cross,
+  video,
+  rightarrow,
 };

@@ -6,7 +6,9 @@ import {
   Text,
   ToastAndroid,
   TouchableOpacity,
+  Button,
 } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
 
 import styles from "./promptinput.style";
 
@@ -118,6 +120,21 @@ const Promptinput = () => {
       </View>
       <View style={styles.slidercontainer}>
         <SliderCat />
+      </View>
+      <View style={styles.submitbutton}>
+        <TouchableOpacity style={styles.submitbuttonbase}>
+          <Image source={icons.video} style={styles.submitbuttonicon} />
+          <View style={styles.submitbuttontexts}>
+            <Text style={styles.submitbuttontext}>Create</Text>
+            <Text style={styles.submitbuttontext2}>Watch an Ad</Text>
+          </View>
+          <FontAwesome
+            style={styles.submitbuttonicon}
+            name="arrow-circle-o-right"
+            size={24}
+            color={COLORS.white}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

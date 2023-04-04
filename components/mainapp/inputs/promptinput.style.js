@@ -105,6 +105,42 @@ const styles = StyleSheet.create({
     marginStart: SIZES.small,
     marginBottom: SIZES.xSmall,
   },
+  submitbutton: {
+    marginTop: SIZES.small,
+    marginEnd: SIZES.small,
+    marginStart: SIZES.small,
+    marginBottom: SIZES.small,
+  },
+  submitbuttonbase: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    backgroundColor: COLORS.primary,
+    borderRadius: 10,
+    height: 70,
+    alignItems: "center",
+    paddingStart: SIZES.small,
+    paddingEnd: SIZES.small,
+  },
+  submitbuttontext: {
+    fontSize: SIZES.xmediam,
+    fontFamily: FONT.medium,
+    color: COLORS.white,
+  },
+  submitbuttontext2: {
+    fontSize: SIZES.xmediam,
+    fontFamily: FONT.medium,
+    color: COLORS.gray,
+  },
+  submitbuttonicon: {
+    width: 20,
+    height: 20,
+    marginStart: SIZES.xSmall,
+  },
+  submitbuttontexts: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 export default styles;
