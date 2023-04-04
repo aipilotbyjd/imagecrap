@@ -31,101 +31,133 @@ const SliderCat = () => {
           contentContainerStyle={styles.scrollContainer}
         >
           <TouchableOpacity
-            style={[
-              styles.stylesingle,
-              selectedItem === "item1" && styles.selected,
-            ]}
+            style={[styles.stylesingle]}
             onPress={() => handleSelectItem("item1")}
           >
-            <View style={styles.iconcontainer}>
-              <Image source={icons.share} style={styles.icon} />
+            <View style={selectedItem === "item1" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
             </View>
             <View style={styles.textstyleok}>
               <Text style={styles.text}>Novalistic</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            style={[
-              styles.stylesingle,
-              selectedItem === "item2" && styles.selected,
-            ]}
+            style={styles.stylesingle}
             onPress={() => handleSelectItem("item2")}
           >
-            <View style={styles.iconcontainer}>
-              <Image source={icons.share} style={styles.icon} />
+            <View style={selectedItem === "item2" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
             </View>
             <View style={styles.textstyleok}>
               <Text style={styles.text}>Mythological</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            style={[
-              styles.stylesingle,
-              selectedItem === "item3" && styles.selected,
-            ]}
+            style={styles.stylesingle}
             onPress={() => handleSelectItem("item3")}
           >
-            <View style={styles.iconcontainer}>
-              <Image source={icons.share} style={styles.icon} />
+            <View style={selectedItem === "item3" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
             </View>
             <View style={styles.textstyleok}>
-              <Text style={styles.text}>Style 3</Text>
+              <Text style={styles.text}>Abstract</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            style={[
-              styles.stylesingle,
-              selectedItem === "item4" && styles.selected,
-            ]}
+            style={styles.stylesingle}
             onPress={() => handleSelectItem("item4")}
           >
-            <View style={styles.iconcontainer}>
-              <Image source={icons.share} style={styles.icon} />
+            <View style={selectedItem === "item4" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
             </View>
             <View style={styles.textstyleok}>
-              <Text style={styles.text}>Style 3</Text>
+              <Text style={styles.text}>Geometric</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            style={[
-              styles.stylesingle,
-              selectedItem === "item5" && styles.selected,
-            ]}
+            style={styles.stylesingle}
             onPress={() => handleSelectItem("item5")}
           >
-            <View style={styles.iconcontainer}>
-              <Image source={icons.share} style={styles.icon} />
+            <View style={selectedItem === "item5" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
             </View>
             <View style={styles.textstyleok}>
-              <Text style={styles.text}>Style 3</Text>
+              <Text style={styles.text}>Novalistic</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            style={[
-              styles.stylesingle,
-              selectedItem === "item6" && styles.selected,
-            ]}
+            style={styles.stylesingle}
             onPress={() => handleSelectItem("item6")}
           >
-            <View style={styles.iconcontainer}>
-              <Image source={icons.share} style={styles.icon} />
+            <View style={selectedItem === "item6" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
             </View>
             <View style={styles.textstyleok}>
-              <Text style={styles.text}>Style 3</Text>
+              <Text style={styles.text}>Mythological</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            style={[
-              styles.stylesingle,
-              selectedItem === "item7" && styles.selected,
-            ]}
+            style={styles.stylesingle}
             onPress={() => handleSelectItem("item7")}
           >
-            <View style={styles.iconcontainer}>
-              <Image source={icons.share} style={styles.icon} />
+            <View style={selectedItem === "item7" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
             </View>
             <View style={styles.textstyleok}>
-              <Text style={styles.text}>Style 3</Text>
+              <Text style={styles.text}>Abstract</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.stylesingle}
+            onPress={() => handleSelectItem("item8")}
+          >
+            <View style={selectedItem === "item8" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
+            </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Geometric</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.stylesingle}
+            onPress={() => handleSelectItem("item9")}
+          >
+            <View style={selectedItem === "item9" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
+            </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Novalistic</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.stylesingle}
+            onPress={() => handleSelectItem("item10")}
+          >
+            <View style={selectedItem === "item10" && styles.selected}>
+              <View style={styles.iconcontainer}>
+                <Image source={icons.share} style={styles.icon} />
+              </View>
+            </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Mythological</Text>
             </View>
           </TouchableOpacity>
         </ScrollView>
