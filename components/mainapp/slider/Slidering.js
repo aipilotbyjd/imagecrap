@@ -1,25 +1,37 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import Carousel from "react-native-snap-carousel";
+import Carousel, { ParallaxImage } from "react-native-snap-carousel";
 import data from "./data";
+import { SIZES, COLORS } from "../../../constants";
 
 const Slidering = () => {
-  const renderItem = ({ item }) => {
+  const renderItem = ({ item, index }, parallaxProps) => {
+    const image = (
+      <Image
+        source={{ uri: item.image }}
+        style={styles.image}
+        resizeMode="cover"
+      />
+    );
+
+    const text = (
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>{item.title}</Text>
+        <Text style={styles.subtitle}>{item.subtitle}</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Try Now</Text>
+        </TouchableOpacity>
+      </View>
+    );
+
     return (
-      <View style={styles.itembanner}>
-        <View style={styles.imagebanner}>
-          <Image
-            source={{ uri: item.illustration }}
-            style={styles.illustration}
-          />
-        </View>
-        <View style={styles.textbanner}>
-          <Text style={styles.title}>{item.title}</Text>
-          <Text style={styles.subtitle}>{item.subtitle}</Text>
-        </View>
+      <View style={styles.item}>
+        {image}
+        {text}
       </View>
     );
   };
+
   return (
     <View style={styles.container}>
       <Carousel
@@ -27,8 +39,8 @@ const Slidering = () => {
         renderItem={renderItem}
         sliderWidth={330}
         itemWidth={200}
-        layout={"tinder"}
-        // // loop
+        layout={"default"}
+        loop
         // autoplay
         // autoplayDelay={2000}
         // autoplayInterval={3000}
@@ -37,8 +49,6 @@ const Slidering = () => {
   );
 };
 
-export default Slidering;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -46,35 +56,61 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  itembanner: {
-    flexDirection: "row",
-    width: 300,
-    height: 200,
-    borderRadius: 10,
-    backgroundColor: "#fff",
-  },
-  imagebanner: {
-    width: 300,
+  item: {
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
     height: 150,
-    borderRadius: 10,
+  },
+  itemContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "100%",
+    height: "100%",
+    padding: 20,
+    backgroundColor: COLORS.gray2,
+  },
+  imageContainer: {
+    flex: 1,
     overflow: "hidden",
   },
-  illustration: {
-    width: 300,
-    height: 150,
+  image: {
+    flex: 1,
     resizeMode: "cover",
   },
-  textbanner: {
-    width: 300,
-    height: 50,
-    padding: 10,
+  textContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
+    padding: 20,
   },
   title: {
-    fontSize: 18,
+    fontSize: 10,
     fontWeight: "bold",
+    marginBottom: 10,
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 12,
+    width: 180,
     color: "#666",
+    marginBottom: 20,
+  },
+  button: {
+    width: 90,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "blue",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 10,
+  },
+  buttonText: {
+    fontSize: 10,
+    color: "#fff",
+    fontWeight: "bold",
   },
 });
+
+export default Slidering;
