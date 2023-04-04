@@ -131,7 +131,7 @@ const Promptinput = () => {
           <FontAwesome
             style={styles.submitbuttonicon}
             name="arrow-circle-o-right"
-            size={24}
+            size={25}
             color={COLORS.white}
           />
         </TouchableOpacity>
