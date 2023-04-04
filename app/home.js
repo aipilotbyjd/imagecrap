@@ -1,16 +1,21 @@
 import React from "react";
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, ScrollView, View } from "react-native";
 import { Promptinput, Slidering } from "../components";
 
 const Home = () => {
   return (
     <SafeAreaView>
-      <View>
-        <Promptinput />
-      </View>
-      <View>
-        <Slidering />
-      </View>
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={{ backgroundColor: "#fff" }}
+      >
+        <View>
+          <Promptinput />
+        </View>
+        <View>
+          <Slidering />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
