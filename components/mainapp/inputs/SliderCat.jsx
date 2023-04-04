@@ -40,6 +40,9 @@ const SliderCat = () => {
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Novalistic</Text>
+            </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={[
@@ -50,6 +53,9 @@ const SliderCat = () => {
           >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
+            </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Mythological</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
@@ -62,6 +68,9 @@ const SliderCat = () => {
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Style 3</Text>
+            </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={[
@@ -72,6 +81,9 @@ const SliderCat = () => {
           >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
+            </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Style 3</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
@@ -84,6 +96,9 @@ const SliderCat = () => {
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Style 3</Text>
+            </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={[
@@ -95,6 +110,9 @@ const SliderCat = () => {
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
             </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Style 3</Text>
+            </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={[
@@ -105,6 +123,9 @@ const SliderCat = () => {
           >
             <View style={styles.iconcontainer}>
               <Image source={icons.share} style={styles.icon} />
+            </View>
+            <View style={styles.textstyleok}>
+              <Text style={styles.text}>Style 3</Text>
             </View>
           </TouchableOpacity>
         </ScrollView>
@@ -120,7 +141,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   text: {
-    fontSize: 16,
+    fontSize: 10,
+    fontFamily: FONT.medium,
     color: "#000",
   },
   icon: {
@@ -175,6 +197,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#000",
     borderRadius: 10,
+  },
+  textstyleok: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginVertical: 5,
   },
 });
 
