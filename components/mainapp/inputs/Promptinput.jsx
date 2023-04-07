@@ -18,6 +18,7 @@ import SliderCat from "./SliderCat";
 const Promptinput = () => {
   const [prompt, setPrompt] = React.useState("");
   const [isClicked, setIsClicked] = React.useState(false);
+  const [selectedItem, setSelectedItem] = React.useState(null);
 
   useEffect(() => {
     if (prompt.length > 500) {
@@ -27,6 +28,11 @@ const Promptinput = () => {
       );
     }
   }, [prompt]);
+
+  const handleSelectItem = (item) => {
+    setSelectedItem(item);
+    ToastAndroid.show(item, 1000);
+  };
 
   const DeletePrompt = () => {
     ToastAndroid.show("Prompt Deleted", 1000);
@@ -133,25 +139,37 @@ const Promptinput = () => {
         </View>
         <View style={styles.aspectratioicons}>
           <TouchableOpacity
-            style={styles.aspectratioiconbox}
+            style={
+              selectedItem === "1:1"
+                ? styles.aspectratioiconboxselected
+                : styles.aspectratioiconbox
+            }
             onPress={() => {
-              ToastAndroid.show("16:9", ToastAndroid.SHORT);
+              handleSelectItem("1:1");
             }}
           >
             <Image source={icons.square} style={styles.aspectratioicon} />
           </TouchableOpacity>
           <TouchableOpacity
-            style={styles.aspectratioiconbox}
+            style={
+              selectedItem === "2:3"
+                ? styles.aspectratioiconboxselected
+                : styles.aspectratioiconbox
+            }
             onPress={() => {
-              ToastAndroid.show("4:3", ToastAndroid.SHORT);
+              handleSelectItem("2:3");
             }}
           >
             <Image source={icons.square} style={styles.aspectratioicon} />
           </TouchableOpacity>
           <TouchableOpacity
-            style={styles.aspectratioiconbox}
+            style={
+              selectedItem === "3:2"
+                ? styles.aspectratioiconboxselected
+                : styles.aspectratioiconbox
+            }
             onPress={() => {
-              ToastAndroid.show("1:1", ToastAndroid.SHORT);
+              handleSelectItem("3:2");
             }}
           >
             <Image source={icons.square} style={styles.aspectratioicon} />
