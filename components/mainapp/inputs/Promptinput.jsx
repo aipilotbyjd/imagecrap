@@ -160,7 +160,7 @@ const Promptinput = () => {
               handleSelectItem("2:3");
             }}
           >
-            <Image source={icons.square} style={styles.aspectratioicon} />
+            <Image source={icons.rectangular} style={styles.aspectratioicon2} />
           </TouchableOpacity>
           <TouchableOpacity
             style={
@@ -172,7 +172,7 @@ const Promptinput = () => {
               handleSelectItem("3:2");
             }}
           >
-            <Image source={icons.square} style={styles.aspectratioicon} />
+            <Image source={icons.rectangular} style={styles.aspectratioicon} />
           </TouchableOpacity>
         </View>
       </View>

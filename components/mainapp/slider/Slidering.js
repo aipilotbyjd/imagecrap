@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
   },
   image: {
     ...StyleSheet.absoluteFillObject,
-    resizeMode: "cover",
   },
   textContainer: {
     flexDirection: "column",

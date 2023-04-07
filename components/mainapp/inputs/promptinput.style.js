@@ -180,6 +180,11 @@ const styles = StyleSheet.create({
     width: 15,
     height: 15,
   },
+  aspectratioicon2: {
+    width: 15,
+    height: 15,
+    transform: [{ rotate: "90deg" }],
+  },
   aspectratioicons: {
     flexDirection: "row",
     justifyContent: "space-between",

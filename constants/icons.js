@@ -14,6 +14,7 @@ import video from "../assets/icons/videos.png";
 import rightarrow from "../assets/icons/rightarrow.png";
 import loder from "../assets/icons/lodr.gif";
 import square from "../assets/icons/square.png";
+import rectangular from "../assets/icons/rectangular.png";
 
 export default {
   heart,
@@ -32,4 +33,5 @@ export default {
   rightarrow,
   loder,
   square,
+  rectangular,
 };
