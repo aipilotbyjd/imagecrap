@@ -126,6 +126,38 @@ const Promptinput = () => {
           </TouchableOpacity>
         </View>
       </View>
+      {/* i want to add aspact ratio here */}
+      <View style={styles.aspectratiocontainer}>
+        <View style={styles.aspectratiotextcontainer}>
+          <Text style={styles.aspectratiotextok}>Aspect Ratio</Text>
+        </View>
+        <View style={styles.aspectratioicons}>
+          <TouchableOpacity
+            style={styles.aspectratioiconbox}
+            onPress={() => {
+              ToastAndroid.show("16:9", ToastAndroid.SHORT);
+            }}
+          >
+            <Image source={icons.square} style={styles.aspectratioicon} />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.aspectratioiconbox}
+            onPress={() => {
+              ToastAndroid.show("4:3", ToastAndroid.SHORT);
+            }}
+          >
+            <Image source={icons.square} style={styles.aspectratioicon} />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.aspectratioiconbox}
+            onPress={() => {
+              ToastAndroid.show("1:1", ToastAndroid.SHORT);
+            }}
+          >
+            <Image source={icons.square} style={styles.aspectratioicon} />
+          </TouchableOpacity>
+        </View>
+      </View>
       <View style={styles.slidercontainer}>
         <SliderCat />
       </View>

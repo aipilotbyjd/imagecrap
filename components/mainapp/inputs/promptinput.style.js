@@ -157,6 +157,56 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  aspectratiocontainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginEnd: SIZES.small,
+    marginStart: SIZES.medium,
+    marginTop: SIZES.small,
+  },
+  aspectratiotextcontainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  aspectratiotextok: {
+    fontSize: SIZES.xmediam,
+    fontFamily: FONT.medium,
+    color: COLORS.primary,
+    textAlign: "center",
+  },
+  aspectratioicon: {
+    width: 15,
+    height: 15,
+  },
+  aspectratioicons: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  aspectratioiconbox: {
+    width: 60,
+    height: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: COLORS.gray,
+    marginEnd: SIZES.small,
+    backgroundColor: COLORS.white,
+  },
+  aspectratioiconboxselected: {
+    width: 60,
+    height: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: COLORS.primary,
+    marginEnd: SIZES.small,
+    backgroundColor: COLORS.primary,
+  },
 });
 
 export default styles;
