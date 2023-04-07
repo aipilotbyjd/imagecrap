@@ -1,33 +1,38 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 import Carousel, { ParallaxImage } from "react-native-snap-carousel";
+import { COLORS, SIZES } from "../../../constants";
 import data from "./data";
-import { SIZES, COLORS } from "../../../constants";
 
-const Slidering = () => {
+const { width: screenWidth } = Dimensions.get("window");
+
+const Slider = () => {
   const renderItem = ({ item, index }, parallaxProps) => {
-    const image = (
-      <Image
-        source={{ uri: item.image }}
-        style={styles.image}
-        resizeMode="cover"
-      />
-    );
-
-    const text = (
-      <View style={styles.textContainer}>
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.subtitle}>{item.subtitle}</Text>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Try Now</Text>
-        </TouchableOpacity>
-      </View>
-    );
-
     return (
-      <View style={styles.item}>
-        {image}
-        {text}
+      <View style={styles.itemContainer}>
+        <View style={styles.imageContainer}>
+          <ParallaxImage
+            source={{ uri: item.illustration }}
+            containerStyle={styles.image}
+            style={styles.image}
+            parallaxFactor={0.4}
+            {...parallaxProps}
+          />
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.subtitle}>{item.subtitle}</Text>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Try Now</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   };
@@ -37,13 +42,14 @@ const Slidering = () => {
       <Carousel
         data={data}
         renderItem={renderItem}
-        sliderWidth={330}
-        itemWidth={200}
-        layout={"default"}
-        loop
+        sliderWidth={screenWidth}
+        itemWidth={screenWidth}
+        layout={"tinder"}
+        // loop
         // autoplay
         // autoplayDelay={2000}
         // autoplayInterval={3000}
+        hasParallaxImages={true}
       />
     </View>
   );
@@ -52,65 +58,60 @@ const Slidering = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: COLORS.white,
     alignItems: "center",
     justifyContent: "center",
-  },
-  item: {
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: 150,
   },
   itemContainer: {
+    flex: 1,
+    height: 140,
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "space-between",
-    width: "100%",
-    height: "100%",
-    padding: 20,
-    backgroundColor: COLORS.gray2,
+    alignItems: "center",
+    backgroundColor: COLORS.white,
+    borderRadius: 10,
+    overflow: "hidden",
+    borderColor: COLORS.lightGray,
   },
   imageContainer: {
-    flex: 1,
-    overflow: "hidden",
+    width: screenWidth / 2,
+    height: "100%",
+    backgroundColor: COLORS.white,
   },
   image: {
-    flex: 1,
+    ...StyleSheet.absoluteFillObject,
     resizeMode: "cover",
   },
   textContainer: {
-    flex: 1,
-    alignItems: "center",
+    flexDirection: "column",
     justifyContent: "center",
-    alignContent: "center",
-    padding: 20,
+    alignItems: "center",
+    width: screenWidth / 2,
+    height: "100%",
+    padding: 10,
+    borderRadius: 10,
   },
   title: {
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: "bold",
     marginBottom: 10,
   },
   subtitle: {
-    fontSize: 12,
-    width: 180,
-    color: "#666",
+    fontSize: 10,
+    color: COLORS.gray,
     marginBottom: 20,
   },
   button: {
-    width: 90,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "blue",
+    backgroundColor: COLORS.black,
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 10,
   },
   buttonText: {
     fontSize: 10,
-    color: "#fff",
+    color: COLORS.white,
     fontWeight: "bold",
   },
 });
 
-export default Slidering;
+export default Slider;

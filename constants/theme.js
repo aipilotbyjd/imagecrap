@@ -5,6 +5,7 @@ const COLORS = {
 
   gray: "#83829A",
   gray2: "#C1C0C8",
+  lightGray: "#454545",
 
   white: "#F3F4F8",
   lightWhite: "#FAFAFC",
@@ -13,6 +14,10 @@ const COLORS = {
   lightBlack: "#1E1E1E",
 
   red: "#FF0000",
+
+  green: "#32CD32",
+
+  slider: "#7149C6",
 };
 
 const FONT = {
