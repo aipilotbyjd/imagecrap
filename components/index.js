@@ -21,6 +21,8 @@ import Promptinput from "./mainapp/inputs/Promptinput";
 //slider component
 import Slidering from "./mainapp/slider/Slidering";
 
+import PromptInspi from "./mainapp/inspi/PromptInspi";
+
 export {
   ScreenHeaderBtn,
   Welcome,
@@ -34,4 +36,5 @@ export {
   NearbyJobCard,
   Promptinput,
   Slidering,
+  PromptInspi,
 };
